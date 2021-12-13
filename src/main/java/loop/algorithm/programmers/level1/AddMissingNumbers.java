@@ -7,8 +7,13 @@ public class AddMissingNumbers {
 
     public int test() {
         int total = 45;
+        int sum = 0;
         int[] numbers = {1,2,3,4,5};
 
-        return total - Arrays.stream(numbers).sum();
+        for (int i=0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        return total - sum;
     }
 }
